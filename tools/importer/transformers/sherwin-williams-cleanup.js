@@ -9,7 +9,7 @@ export default function transform(hookName, element) {
       '.modal-container',
       '.back-to-top',
       '.breadcrumbs',
-      '#onetrust-consent-sdk'
+      '#onetrust-consent-sdk',
     ]);
   }
 }
