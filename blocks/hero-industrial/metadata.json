@@ -1,0 +1,16 @@
+{
+  "variantName": "hero-industrial",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-01-13T15:43:00.000Z",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "industrial-hero",
+    "imagePattern": "side-by-side"
+  },
+  "usage": {
+    "pagesUsing": ["/na/us/en/aerospace/catalog/category/products-by-industry/commercial-aviation-10656251"],
+    "reuseCount": 1
+  }
+}
