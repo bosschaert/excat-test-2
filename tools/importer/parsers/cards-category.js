@@ -5,7 +5,7 @@ export default function parse(element, { document }) {
 
   const items = element.querySelectorAll('.category-rollup, .related-content__container__content, .media-tile, .primary-cta');
 
-  items.forEach(item => {
+  items.forEach((item) => {
     const imageCell = document.createElement('div');
     const contentCell = document.createElement('div');
 
