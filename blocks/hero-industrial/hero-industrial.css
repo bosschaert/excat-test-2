@@ -1,0 +1,47 @@
+.hero-industrial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.hero-industrial h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.hero-industrial h2 {
+  font-size: 1.25rem;
+  color: #0066b2;
+  margin-bottom: 1rem;
+}
+
+.hero-industrial p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-industrial a.button {
+  display: inline-block;
+  background-color: #0066b2;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-industrial img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .hero-industrial {
+    grid-template-columns: 1fr;
+  }
+}

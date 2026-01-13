@@ -1,0 +1,21 @@
+{
+  "templates": [
+    {
+      "name": "commercial-aviation-category",
+      "urls": [
+        "https://industrial.sherwin-williams.com/na/us/en/aerospace/catalog/category/products-by-industry/commercial-aviation.10656251.html"
+      ],
+      "description": "Commercial aviation product category page with hero, category listings, related content, and CTAs",
+      "blocks": [
+        {
+          "name": "hero-industrial",
+          "instances": ["section.h1-hero"]
+        },
+        {
+          "name": "cards-category",
+          "instances": ["section.c-category-rollup", "section.related-content", "section.c-media-tiles", "section.primary-cta"]
+        }
+      ]
+    }
+  ]
+}
