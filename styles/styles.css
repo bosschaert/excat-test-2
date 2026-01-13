@@ -11,33 +11,44 @@
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* colors - Industrial/Aerospace Inspired Palette */
+  --background-color: #ffffff;
+  --light-color: #f7f9fc;
+  --dark-color: #0a2540;
+  --text-color: #1a202c;
+  --text-muted: #4a5568;
+  --link-color: #1a4a7a;
+  --link-hover-color: #0a2540;
+  --accent-color: #f7b32b;
+  --accent-hover: #ffc845;
+  --border-color: rgba(0, 0, 0, 0.08);
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  --body-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  --body-font-size-m: 17px;
+  --body-font-size-s: 15px;
+  --body-font-size-xs: 13px;
 
   /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 36px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 72px;
+
+  /* spacing & effects */
+  --section-spacing: 80px;
+  --card-radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 /* fallback fonts */
@@ -104,12 +115,14 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.2;
   scroll-margin: 40px;
+  color: var(--dark-color);
+  letter-spacing: -0.02em;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -229,11 +242,11 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 64px 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: auto;
   padding: 0 24px;
 }
@@ -243,8 +256,12 @@ main > .section:first-of-type {
 }
 
 @media (width >= 900px) {
+  main > .section {
+    margin: 80px 0;
+  }
+
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 48px;
   }
 }
 
@@ -253,5 +270,12 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
-  padding: 40px 0;
+  padding: 64px 0;
+}
+
+@media (width >= 900px) {
+  main .section.light,
+  main .section.highlight {
+    padding: 80px 0;
+  }
 }
