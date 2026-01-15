@@ -1,0 +1,68 @@
+/* Cards Training Block - Grid of training/resource cards */
+.cards-training > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .cards-training > ul {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.cards-training > ul > li {
+  background-color: var(--background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.cards-training > ul > li:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.cards-training .cards-training-card-image {
+  line-height: 0;
+}
+
+.cards-training .cards-training-card-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-training .cards-training-card-body {
+  padding: 24px;
+}
+
+.cards-training .cards-training-card-body h3 {
+  font-family: var(--heading-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--dark-color);
+}
+
+.cards-training .cards-training-card-body p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0 0 16px 0;
+}
+
+.cards-training .cards-training-card-body a {
+  display: inline-block;
+  color: var(--link-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cards-training .cards-training-card-body a:hover {
+  text-decoration: underline;
+}

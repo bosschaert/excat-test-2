@@ -10,7 +10,8 @@
     "imagePattern": "side-by-side"
   },
   "usage": {
-    "pagesUsing": ["/na/us/en/aerospace/catalog/category/products-by-industry/commercial-aviation-10656251"],
-    "reuseCount": 1
+    "pagesUsing": ["/na/us/en/aerospace/catalog/category/products-by-industry/commercial-aviation-10656251", "/painting-contractors/pro-plus/learning-and-development", "/painting-contractors/pro-plus/learning-and-development/learning-pathway"],
+    "reuseCount": 3,
+    "lastUsed": "2026-01-14T13:55:00.000Z"
   }
 }

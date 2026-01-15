@@ -47,55 +47,59 @@
   flex-direction: column;
 }
 
-/* Title link styling - button style like hero */
-.cards-category-card-body a:first-child {
-  display: inline-block;
-  background: #0099a8;
-  color: white;
-  padding: 10px 16px;
-  text-decoration: none;
-  transition: background 0.2s ease;
-  margin-bottom: 12px;
+/* Card without image - body takes full width, left aligned */
+.cards-category > ul > li.no-image {
+  justify-content: flex-start;
 }
 
-.cards-category-card-body a:first-child:hover {
-  background: #007d8a;
-  color: white;
-  text-decoration: none;
+.cards-category > ul > li.no-image .cards-category-card-body {
+  flex: 1 1 100%;
+  max-width: 100%;
+  text-align: left;
 }
 
-.cards-category-card-body a:first-child strong {
+/* Link styling - hyperlink style (override button class) */
+.cards-category-card-body a,
+.cards-category-card-body a.button {
+  color: #0066b2;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+  background: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: inline;
+  font-weight: normal;
+  text-align: left;
+  white-space: normal;
+}
+
+.cards-category-card-body a:hover,
+.cards-category-card-body a.button:hover {
+  color: #004080;
+  background: none;
+  background-color: transparent;
+}
+
+.cards-category-card-body a strong {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.3;
-  display: block;
-  color: white;
-  margin: 0;
+  color: inherit;
 }
 
-/* Secondary links (Basecoat, Monocoat, etc.) */
-.cards-category-card-body a:not(:first-child) {
-  color: #0099a8;
-  text-decoration: underline;
-}
-
-.cards-category-card-body a:not(:first-child):hover {
-  color: #007d8a;
-}
-
-/* Standalone strong elements (not in links) */
+/* Standalone strong elements (headings without links) */
 .cards-category-card-body > p > strong:only-child,
 .cards-category-card-body > strong {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.3;
-  display: inline-block;
-  background: #0099a8;
-  color: white;
-  padding: 10px 16px;
-  margin-bottom: 12px;
+  display: block;
+  color: #222;
+  margin-bottom: 8px;
 }
 
 /* Description text */

@@ -1,44 +1,41 @@
 /* global WebImporter */
 
-export default function parse(element, { document }) {
-  const heading = element.querySelector('h1.h1-hero__heading');
-  const subtitle = element.querySelector('h2.intro-copy');
-  const description = element.querySelector('.c-richtext-editor p');
-  const ctaLink = element.querySelector('a.button.primary');
-  const heroImage = element.querySelector('.h1-hero__container__side-content img');
+/**
+ * Hero Industrial Parser
+ * Parses hero sections with heading, description, and side-by-side image layout
+ */
+export default function parse(element) {
+  const cells = [['Hero-Industrial']];
 
-  const contentCell = document.createElement('div');
+  // Find heading
+  const h1 = element.querySelector('h1');
+  const heading = h1 ? h1.textContent.trim() : '';
+
+  // Find description text
+  const textElement = element.querySelector('.cmp-text p, .swdc-typeset-body-2');
+  const description = textElement ? textElement.textContent.trim() : '';
+
+  // Find image
+  const img = element.querySelector('img.cmp-image__image');
+  const imgSrc = img ? img.getAttribute('src') : '';
+  const imgAlt = img ? img.getAttribute('alt') : '';
+
+  // Build content cell
+  let contentCell = '';
   if (heading) {
-    const h1 = document.createElement('h1');
-    h1.textContent = heading.textContent.trim();
-    contentCell.appendChild(h1);
-  }
-  if (subtitle) {
-    const h2 = document.createElement('h2');
-    h2.textContent = subtitle.textContent.trim();
-    contentCell.appendChild(h2);
+    contentCell += '<h1>' + heading + '</h1>';
   }
   if (description) {
-    const p = document.createElement('p');
-    p.textContent = description.textContent.trim();
-    contentCell.appendChild(p);
-  }
-  if (ctaLink) {
-    const a = document.createElement('a');
-    a.href = ctaLink.getAttribute('href');
-    a.textContent = ctaLink.textContent.trim();
-    contentCell.appendChild(a);
+    contentCell += '<p>' + description + '</p>';
   }
 
-  const imageCell = document.createElement('div');
-  if (heroImage) {
-    const img = document.createElement('img');
-    img.src = heroImage.getAttribute('src');
-    img.alt = heroImage.getAttribute('alt') || '';
-    imageCell.appendChild(img);
+  // Build image cell
+  let imageCell = '';
+  if (imgSrc) {
+    imageCell = '<img src="' + imgSrc + '" alt="' + imgAlt + '">';
   }
 
-  const cells = [[contentCell, imageCell]];
-  const block = WebImporter.Blocks.createBlock(document, { name: 'Hero-Industrial', cells });
-  element.replaceWith(block);
+  cells.push([contentCell, imageCell]);
+
+  return cells;
 }

@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-01-14T12:50:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.sherwin-williams.com/painting-contractors/pro-plus/learning-and-development",
+    "originPage": "Learning and Development page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "branded",
+    "density": "spacious",
+    "purpose": "promotional-banner",
+    "imagePattern": "logo-left"
+  },
+  "contentPattern": {
+    "structure": "logo/image + heading + CTA buttons",
+    "columns": 2,
+    "buttonCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional banners",
+      "membership signup sections",
+      "program highlight sections",
+      "CTA banner sections"
+    ],
+    "notSuitableFor": [
+      "content-heavy side-by-side layouts",
+      "comparison sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/painting-contractors/pro-plus/learning-and-development"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-14T12:50:00.000Z"
+  }
+}

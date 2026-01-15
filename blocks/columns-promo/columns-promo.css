@@ -1,0 +1,84 @@
+/* Columns Promo Block - Side-by-side promotional content */
+.columns-promo > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .columns-promo > div {
+    flex-direction: row;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+.columns-promo > div > div {
+  flex: 1;
+}
+
+.columns-promo .columns-promo-img-col {
+  flex: 0 0 auto;
+  max-width: 200px;
+}
+
+.columns-promo .columns-promo-img-col img {
+  width: 100%;
+  height: auto;
+}
+
+.columns-promo h3 {
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: var(--dark-color);
+}
+
+.columns-promo p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.columns-promo a.button {
+  display: inline-block;
+  background: var(--link-color);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.columns-promo a.button:hover {
+  background: var(--link-hover-color);
+}
+
+.columns-promo a.button.secondary {
+  background: transparent;
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+}
+
+.columns-promo a.button.secondary:hover {
+  background: var(--link-color);
+  color: white;
+}
+
+/* Section highlight styling for promo banners */
+.section.highlight .columns-promo h3,
+.section.highlight .columns-promo p {
+  color: white;
+}
+
+.section.highlight .columns-promo a.button {
+  background: white;
+  color: var(--link-color);
+}
+
+.section.highlight .columns-promo a.button:hover {
+  background: var(--light-color);
+}

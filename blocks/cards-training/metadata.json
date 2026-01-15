@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-training",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-01-14T12:50:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.sherwin-williams.com/painting-contractors/pro-plus/learning-and-development",
+    "originPage": "Learning and Development page",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "comfortable",
+    "purpose": "training-resources",
+    "imagePattern": "thumbnail-top"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + CTA link",
+    "gridColumns": 3,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "training resource pages",
+      "learning hub pages",
+      "feature showcase sections",
+      "resource grid displays"
+    ],
+    "notSuitableFor": [
+      "category listings with horizontal layout",
+      "product catalogs"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/painting-contractors/pro-plus/learning-and-development"],
+    "reuseCount": 1,
+    "lastUsed": "2026-01-14T12:50:00.000Z"
+  }
+}

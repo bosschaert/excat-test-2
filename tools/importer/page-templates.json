@@ -1,19 +1,56 @@
 {
   "templates": [
     {
-      "name": "commercial-aviation-category",
-      "urls": [
-        "https://industrial.sherwin-williams.com/na/us/en/aerospace/catalog/category/products-by-industry/commercial-aviation.10656251.html"
-      ],
-      "description": "Commercial aviation product category page with hero, category listings, related content, and CTAs",
+      "name": "learning-development-page",
+      "urls": ["https://www.sherwin-williams.com/painting-contractors/pro-plus/learning-and-development"],
+      "description": "Learning and Development page template for Sherwin-Williams PRO+ section",
       "blocks": [
         {
-          "name": "hero-industrial",
-          "instances": ["section.h1-hero"]
+          "name": "section-hero",
+          "section": true,
+          "selector": ".cmp-container:has(.swdc-typeset-display-1)",
+          "sectionMetadata": {}
         },
         {
-          "name": "cards-category",
-          "instances": ["section.c-category-rollup", "section.related-content", "section.c-media-tiles", "section.primary-cta"]
+          "name": "hero-industrial",
+          "selector": ".cmp-container:has(h1.swdc-title)",
+          "parser": "hero-industrial"
+        },
+        {
+          "name": "section-navigation",
+          "section": true,
+          "selector": ".swcom-buttonWrapper__track--horizontal",
+          "sectionMetadata": {}
+        },
+        {
+          "name": "section-training-cards",
+          "section": true,
+          "selector": ".cmp-container:has(h2:contains('Training'))",
+          "sectionMetadata": {}
+        },
+        {
+          "name": "cards-training",
+          "selector": ".aem-Grid--4:has(.cmp-image):has(h3)",
+          "parser": "cards-training"
+        },
+        {
+          "name": "section-promo-banner",
+          "section": true,
+          "selector": ".cmp-container:has(img[src*='pro-plus-logo'])",
+          "sectionMetadata": {
+            "style": "highlight"
+          }
+        },
+        {
+          "name": "columns-promo",
+          "selector": ".cmp-container:has(img[src*='pro-plus-logo']):has(.swdc-button)",
+          "parser": "columns-promo"
+        },
+        {
+          "name": "section-spanish",
+          "section": true,
+          "selector": ".cmp-container:has(img[src*='newsletter'])",
+          "sectionMetadata": {}
         }
       ]
     }
